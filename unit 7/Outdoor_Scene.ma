@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Outdoor_Scene.ma
-//Last modified: Sat, Oct 26, 2024 09:33:10 PM
+//Last modified: Sat, Oct 26, 2024 09:36:03 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -13,12 +13,12 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "FB0ADB08-4C8E-96AE-94A9-759DD70783CC";
+fileInfo "UUID" "100AED7E-4699-139B-7667-52B8683952E2";
 createNode transform -s -n "persp";
 	rename -uid "11087D22-4EEF-B304-186A-E993F25CE167";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 17.195558862373442 10.010463188467918 15.301193432451718 ;
-	setAttr ".r" -type "double3" -22.800000000144166 4004.7999999439612 0 ;
+	setAttr ".t" -type "double3" 16.216054284999736 10.219843427942413 16.092542872166707 ;
+	setAttr ".r" -type "double3" -23.400000000100828 4001.1999999434115 0 ;
 	setAttr ".rp" -type "double3" 0 9.8607613152626476e-32 9.0949470177292824e-13 ;
 	setAttr ".rpt" -type "double3" 8.9509801201064528e-13 -4.206999609075796e-14 -9.7182028139046172e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -49334,6 +49334,7 @@ createNode aiAreaLight -n "aiAreaLightShape2" -p "aiAreaLight2";
 	setAttr -k off ".v";
 	setAttr ".csh" no;
 	setAttr ".rcsh" no;
+	setAttr ".lp" -type "double3" 0 0 -4.4408920985006262e-16 ;
 	setAttr ".intensity" 10;
 	setAttr ".ai_exposure" 1.4935064315795898;
 	setAttr ".ai_translator" -type "string" "quad";
@@ -51561,7 +51562,7 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[21].y" 402.85714721679688;
 	setAttr ".tgi[0].ni[21].nvs" 1923;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "F27D474C-4694-D4F8-B89E-D1A5A30D76D4";
+	rename -uid "629B8142-4D76-030E-47A1-F492D078584E";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 44;
@@ -51619,6 +51620,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "polyBevel11.out" "sandShape.i";
 connectAttr "groupId43.id" "somethingShape.iog.og[0].gid";
 connectAttr "blinn5SG.mwc" "somethingShape.iog.og[0].gco";
